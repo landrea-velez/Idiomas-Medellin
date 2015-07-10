@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Idiomas Medellín</string>
+    <string name="title_section1">Información perfil</string>
+    <string name="title_section2">Reserva clase</string>
+    <string name="title_section3">Apuntes sueltos</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Ejemplo de acción</string>
+    <string name="action_settings">Ajustes</string>
+
+</resources>
