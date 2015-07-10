@@ -5,6 +5,9 @@
     <string name="title_section1">Información perfil</string>
     <string name="title_section2">Reserva clase</string>
     <string name="title_section3">Apuntes sueltos</string>
+    <string name="title_section4">Misión - Visión</string>
+    <string name="title_section5">Información general</string>
+    <string name="title_section6">Escríbenos un mensaje</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Ejemplo de acción</string>
