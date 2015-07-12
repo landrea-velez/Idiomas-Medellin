@@ -3,24 +3,27 @@ package co.edu.idiomasmedellin;
 import com.example.myapp.R;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.TextView;
+import android.widget.ListView;
+import android.widget.Toast;
+import co.edu.idiomasmedellin.accesoadatos.LessonsDbHelper;
+ 
 
-public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks{
 
 	/**
 	 * Fragment managing the behaviors, interactions and presentation of the
@@ -33,11 +36,19 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 	 * {@link #restoreActionBar()}.
 	 */
 	private CharSequence mTitle;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+
+		
+		/*Declaramos el controlador de la BBDD y accedemos en modo escritura */
+		LessonsDbHelper dbHelper = new LessonsDbHelper(getBaseContext());		 
+		SQLiteDatabase db = dbHelper.getWritableDatabase();		 
+		Toast.makeText(getBaseContext(), "Base de datos preparada", Toast.LENGTH_LONG).show();
+		   
 
 		mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.navigation_drawer);
@@ -53,6 +64,31 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		fragmentManager.beginTransaction().replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
 				.commit();
+		
+		
+		switch(position) {
+		case 0:            
+			
+        break;	
+	    case 1:	  
+	    	Intent lessonsActivity = new Intent(MainActivity.this, LessonsActivity.class);
+	        startActivity(lessonsActivity);
+	    break;
+	    case 2:            
+           
+        break;	
+	    case 3:	            
+	            
+	    break;
+	    case 4:            
+            
+        break;	
+	    case 5:	            
+	            
+	    break;
+	    default:
+	    }
+		
 	}
 
 	public void onSectionAttached(int number) {
@@ -109,6 +145,18 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	
+	private void selectItem(int position) {
+	    switch(position) {
+	    case 1:
+	            Intent a = new Intent(MainActivity.this, LessonsActivity.class);
+	            startActivity(a);
+	    break;	    
+	    default:
+	    }
+	}
+
 
 	/**
 	 * A placeholder fragment containing a simple view.
@@ -146,5 +194,6 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 			((MainActivity) activity).onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
 		}
 	}
+
 
 }

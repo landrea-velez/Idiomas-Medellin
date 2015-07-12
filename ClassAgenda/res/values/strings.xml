@@ -12,5 +12,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Ejemplo de acción</string>
     <string name="action_settings">Ajustes</string>
+    <string name="lista_vacia">No se encontraron datos para mostrar en la lista</string>
 
 </resources>
