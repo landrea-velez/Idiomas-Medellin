@@ -12,6 +12,7 @@ import android.content.res.TypedArray;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.MenuItem;
@@ -21,6 +22,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import co.edu.idiomasmedellin.accesoadatos.LessonsDbHelper;
+import co.edu.idiomasmedellin.fragments.HomeFragment;
+import co.edu.idiomasmedellin.fragments.LevelFragment;
+import co.edu.idiomasmedellin.fragments.ProfileFragment;
 
 public class MainActivity extends Activity {
 	    private String[] titulos;
@@ -129,7 +133,7 @@ public class MainActivity extends Activity {
             fragment = new ProfileFragment();
             break;
         case 4:
-            fragment = new LevelFragment();   
+        	fragment = new LevelFragment();        	
             break;
      
  
