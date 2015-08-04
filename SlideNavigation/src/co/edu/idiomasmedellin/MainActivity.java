@@ -30,60 +30,69 @@ public class MainActivity extends Activity {
 	    private String[] titulos;
 	    private DrawerLayout NavDrawerLayout;
 	    private ListView NavList;
-        private ArrayList<Item_objct> NavItms;
+        private ArrayList<Drawer_ItemObjct> NavItms;
         private TypedArray NavIcons;
 	    private ActionBarDrawerToggle mDrawerToggle;
 	    private CharSequence mDrawerTitle;
 	    private CharSequence mTitle;
-	    NavigationAdapter NavAdapter;  
+	    Drawer_NavigationAdapter NavAdapter;  
 	    Button button;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-			setContentView(R.layout.main);		
+			setContentView(R.layout.drawer_main);		
 			
-			/*Declaramos el controlador de la BBDD y accedemos en modo escritura */
+			/** Se declara el controlador de la BBDD @LessonsDbHelper 
+			 *  Se accede en modo escritura */
 			LessonsDbHelper dbHelper = new LessonsDbHelper(getBaseContext());		 
 			SQLiteDatabase db = dbHelper.getWritableDatabase();		 
 			Toast.makeText(getBaseContext(), "Base de datos preparada", Toast.LENGTH_LONG).show();
 
 			//Drawer Layout
 			NavDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+			
 			//Lista
 	        NavList = (ListView) findViewById(R.id.lista);
-	        //Declaramos el header el cual sera el layout de header.xml
-	        View header = getLayoutInflater().inflate(R.layout.header, null);
-	        //Establecemos header
+	        
+	        //Header: el cual sera el layout de header.xml
+	        View header = getLayoutInflater().inflate(R.layout.drawer_header, null);
+	        
+	        //Establece header
 	        NavList.addHeaderView(header);
-			//Tomamos listado  de imgs desde drawable
-	        NavIcons = getResources().obtainTypedArray(R.array.navigation_iconos);			
-			//Tomamos listado  de titulos desde el string-array de los recursos @string/nav_options
+	        
+			//Toma listado  de imgs desde drawable
+	        NavIcons = getResources().obtainTypedArray(R.array.navigation_iconos);	
+	        
+			//Toma listado  de titulos desde el string-array de los recursos @string/nav_options
 	        titulos = getResources().getStringArray(R.array.nav_options);
+	        
 	        //Listado de titulos de barra de navegacion
-	        NavItms = new ArrayList<Item_objct>();
-	        //Agregamos objetos Item_objct al array
-	        //Perfil	      
-	        NavItms.add(new Item_objct(titulos[0], NavIcons.getResourceId(0, -1)));
-	        //Favoritos
-	        NavItms.add(new Item_objct(titulos[1], NavIcons.getResourceId(1, -1)));
-	        //Eventos
-	        NavItms.add(new Item_objct(titulos[2], NavIcons.getResourceId(2, -1)));
-	        //Lugares
-	        NavItms.add(new Item_objct(titulos[3], NavIcons.getResourceId(3, -1)));
-	        //Etiquetas
-	        NavItms.add(new Item_objct(titulos[4], NavIcons.getResourceId(4, -1)));
-	        //Configuracion
-	        NavItms.add(new Item_objct(titulos[5], NavIcons.getResourceId(5, -1)));
-	        //Share
-	        NavItms.add(new Item_objct(titulos[6], NavIcons.getResourceId(6, -1)));
+	        NavItms = new ArrayList<Drawer_ItemObjct>();
+	        
+	        //Agrega objetos Item_objct al array	   
+	        //Inicio
+	        NavItms.add(new Drawer_ItemObjct(titulos[0], NavIcons.getResourceId(0, -1)));
+	        //Perfil
+	        NavItms.add(new Drawer_ItemObjct(titulos[1], NavIcons.getResourceId(1, -1)));
+	        //Apuntes
+	        NavItms.add(new Drawer_ItemObjct(titulos[2], NavIcons.getResourceId(2, -1)));
+	        //Reserva
+	        NavItms.add(new Drawer_ItemObjct(titulos[3], NavIcons.getResourceId(3, -1)));
+	        //Misión - Visión
+	        NavItms.add(new Drawer_ItemObjct(titulos[4], NavIcons.getResourceId(4, -1)));
+	        //Contacto
+	        NavItms.add(new Drawer_ItemObjct(titulos[5], NavIcons.getResourceId(5, -1)));
+	        //Configuración
+	        NavItms.add(new Drawer_ItemObjct(titulos[6], NavIcons.getResourceId(6, -1)));
 	      
-	        //Declaramos y seteamos nuestro adaptador al cual le pasamos el array con los titulos	       
-	        NavAdapter= new NavigationAdapter(this,NavItms);
+	        /**Declara y setea adaptador @Drawer_NavigationAdapteral cual le pasa el array con los títulos	  */     
+	        NavAdapter= new Drawer_NavigationAdapter(this,NavItms);
 	        NavList.setAdapter(NavAdapter);	
-	        //Siempre vamos a mostrar el mismo titulo
+	       
+	        //Siempre mostrar el mismo titulo
 	        mTitle = mDrawerTitle = getTitle();
 	        
-	        //Declaramos el mDrawerToggle y las imgs a utilizar
+	        //Declara el mDrawerToggle y las imgenes a utilizar
 	        mDrawerToggle = new ActionBarDrawerToggle(
 	                this,                  /* host Activity */
 	                NavDrawerLayout,         /* DrawerLayout object */
@@ -103,13 +112,13 @@ public class MainActivity extends Activity {
 	            }
 	        };	        
 	        
-	        // Establecemos que mDrawerToggle declarado anteriormente sea el DrawerListener
+	        // Establece que mDrawerToggle declarado anteriormente sea el DrawerListener
 	        NavDrawerLayout.setDrawerListener(mDrawerToggle);
-	        //Establecemos que el ActionBar muestre el Boton Home
+	        //Establece que el ActionBar muestre el Boton Home
 	        getActionBar().setDisplayHomeAsUpEnabled(true);
 
-	        //Establecemos la accion al clickear sobre cualquier item del menu.
-	        //De la misma forma que hariamos en una app comun con un listview.
+	        //Establece la accion al clickear sobre cualquier item del menu.
+	        //De la misma forma que un listview.
 	        NavList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 	            @Override
 	            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
@@ -121,7 +130,7 @@ public class MainActivity extends Activity {
 	        MostrarFragment(1);
 	}
 	
-	/*Pasando la posicion de la opcion en el menu nos mostrara el Fragment correspondiente*/
+	/**Pasando la posición de la opción en el menu nos mostrara el Fragment correspondiente*/
     private void MostrarFragment(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
@@ -135,29 +144,27 @@ public class MainActivity extends Activity {
         case 4:
         	fragment = new LevelFragment();        	
             break;
-     
- 
         default:
-        	//si no esta la opcion mostrara un toast y nos mandara a Home
+        	//si no esta la opción mostrara un toast y nos mandara a Home
         	Toast.makeText(getApplicationContext(),"Opcion "+titulos[position-1]+"no disponible!", Toast.LENGTH_SHORT).show();
             fragment = new HomeFragment();
             position=1;
             break;
         }
-        //Validamos si el fragment no es nulo
+        //Valida si el fragment no es nulo
         if (fragment != null) {
             FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
  
-            // Actualizamos el contenido segun la opcion elegida
+            // Actualiza el contenido segun la opcion elegida
             NavList.setItemChecked(position, true);
             NavList.setSelection(position);
-            //Cambiamos el titulo en donde decia "
+            //Cambia el titulo
             setTitle(titulos[position-1]);
-            //Cerramos el menu deslizable
+            //Cerrarel menu deslizable
             NavDrawerLayout.closeDrawer(NavList);
         } else {
-            //Si el fragment es nulo mostramos un mensaje de error.
+            //Si el fragment es nulo muestra un mensaje de error.
             Log.e("Error  ", "MostrarFragment"+position);
         }
     }

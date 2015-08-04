@@ -44,32 +44,42 @@ public final class R {
         public static final int icono=0x7f02000c;
     }
     public static final class id {
-        public static final int backgrd=0x7f090000;
-        public static final int btnA1=0x7f090007;
-        public static final int btnA2=0x7f090008;
-        public static final int btnB1=0x7f090009;
-        public static final int content_frame=0x7f09000b;
-        public static final int drawer_layout=0x7f09000a;
-        public static final int icon=0x7f090002;
-        public static final int imageView1=0x7f090001;
-        public static final int imageView_imagen=0x7f090004;
-        public static final int item_refresh=0x7f09000f;
-        public static final int item_save=0x7f090010;
-        public static final int lista=0x7f09000c;
-        public static final int n=0x7f09000e;
-        public static final int textView1=0x7f09000d;
-        public static final int textView_inferior=0x7f090006;
-        public static final int textView_superior=0x7f090005;
-        public static final int title_item=0x7f090003;
+        public static final int ListView_listado=0x7f090014;
+        public static final int backgrd=0x7f090006;
+        public static final int btnA1=0x7f09000d;
+        public static final int btnA2=0x7f09000e;
+        public static final int btnB1=0x7f09000f;
+        public static final int calendar=0x7f090005;
+        public static final int content_frame=0x7f09000a;
+        public static final int drawer_layout=0x7f090009;
+        public static final int frag_1=0x7f090001;
+        public static final int frag_2=0x7f090003;
+        public static final int icon=0x7f090007;
+        public static final int imageView1=0x7f09000c;
+        public static final int imageView_imagen=0x7f090011;
+        public static final int item_refresh=0x7f090015;
+        public static final int item_save=0x7f090016;
+        public static final int linearlayout01=0x7f090000;
+        public static final int linearlayout02=0x7f090002;
+        public static final int lista=0x7f09000b;
+        public static final int n=0x7f090010;
+        public static final int textView1=0x7f090004;
+        public static final int textView_inferior=0x7f090013;
+        public static final int textView_superior=0x7f090012;
+        public static final int title_item=0x7f090008;
     }
     public static final class layout {
-        public static final int header=0x7f030000;
-        public static final int home=0x7f030001;
-        public static final int itm=0x7f030002;
-        public static final int lessons=0x7f030003;
-        public static final int levels=0x7f030004;
-        public static final int main=0x7f030005;
-        public static final int profile=0x7f030006;
+        public static final int calendar_activity_main=0x7f030000;
+        public static final int calendar_lower_layout=0x7f030001;
+        public static final int calendar_top_layout=0x7f030002;
+        public static final int drawer_header=0x7f030003;
+        public static final int drawer_item=0x7f030004;
+        public static final int drawer_main=0x7f030005;
+        public static final int fragment_home=0x7f030006;
+        public static final int fragment_levels=0x7f030007;
+        public static final int fragment_profile=0x7f030008;
+        public static final int lessons_list_input=0x7f030009;
+        public static final int lessons_list_list=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -79,9 +89,12 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050002;
         public static final int lista_vacia=0x7f050003;
+        /**  Lista de niveles  
+         */
         public static final int nivel_a1=0x7f050004;
         public static final int nivel_a2=0x7f050005;
         public static final int nivel_b1=0x7f050006;
+        public static final int reserva=0x7f050007;
     }
     public static final class style {
         /** 

@@ -14,7 +14,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-import co.edu.idiomasmedellin.LessonsActivity;
+import co.edu.idiomasmedellin.LessonsList_List;
 import co.edu.idiomasmedellin.MainActivity;
 
 /*  Fragment para seccion niveles */ 
@@ -33,7 +33,7 @@ public class LevelFragment extends Fragment implements OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-       View rootView = inflater.inflate(R.layout.levels, container, false);
+       View rootView = inflater.inflate(R.layout.fragment_levels, container, false);
        btnA1 = (Button) rootView.findViewById(R.id.btnA1);
        btnA2 = (Button) rootView.findViewById(R.id.btnA2);
        btnB1 = (Button) rootView.findViewById(R.id.btnB1);
@@ -54,14 +54,19 @@ public class LevelFragment extends Fragment implements OnClickListener {
     	
     	switch (v.getId()) {
         case R.id.btnA1:
-        	Log.d("BOTON", "1");        	
-        	fragment = new HomeFragment();
+        	Log.d("BOTON", "1");    
+        	
+        	Intent intent = new Intent();
+            intent.setClass(getActivity(), CalendarFragment.class);            
+            startActivity(intent);
+        	
+        	/*fragment = new LessonFragment();
             if (fragment != null) {
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();    
             }else{
-                Log.e("Error  ", "MostrarFragment");
-             }           
+                Log.e("Error ", "MostrarFragment");
+             }           */
             break;
             
         case R.id.btnA2:

@@ -1,4 +1,5 @@
-package co.edu.idiomasmedellin;
+package co.edu.idiomasmedellin.fragments;
+
 
 import com.cipolat.slidenavigation.R;
 
@@ -9,15 +10,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /*  Fragment para seccion perfil */ 
-public class ProfileFragment extends Fragment {
+public class LessonFragment extends Fragment {
      
-    public ProfileFragment(){}
+    public LessonFragment(){}
      
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
   
-        View rootView = inflater.inflate(R.layout.profile, container, false);
+        View rootView = inflater.inflate(R.layout.lessons_list_input, container, false);
           
         return rootView;
     }

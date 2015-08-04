@@ -12,11 +12,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class NavigationAdapter extends BaseAdapter {
+public class Drawer_NavigationAdapter extends BaseAdapter {
     private Activity activity;  
-	ArrayList<Item_objct> arrayitms; 
+	ArrayList<Drawer_ItemObjct> arrayitms; 
 
-   public NavigationAdapter(Activity activity,ArrayList<Item_objct>  listarry) {  
+   public Drawer_NavigationAdapter(Activity activity,ArrayList<Drawer_ItemObjct>  listarry) {  
        super();  
        this.activity = activity;  
        this.arrayitms=listarry;
@@ -34,7 +34,7 @@ public class NavigationAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return position;
     }   
-    //Declaramos clase estatica la cual representa a la fila
+    //Declara clase estatica la cual representa a la fila
     public static class Fila  
     {  
     		TextView titulo_itm;
@@ -48,8 +48,8 @@ public class NavigationAdapter extends BaseAdapter {
        {  
            view = new Fila();
            //Creo objeto item y lo obtengo del array
-           Item_objct itm=arrayitms.get(position);
-           convertView = inflator.inflate(R.layout.itm, null);
+           Drawer_ItemObjct itm=arrayitms.get(position);
+           convertView = inflator.inflate(R.layout.drawer_item, null);
            //Titulo
            view.titulo_itm = (TextView) convertView.findViewById(R.id.title_item);
            //Seteo en el campo titulo el nombre correspondiente obtenido del objeto
