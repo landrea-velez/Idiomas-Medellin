@@ -12,11 +12,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Drawer_NavigationAdapter extends BaseAdapter {
+public class DrawerNavigationAdapter extends BaseAdapter {
     private Activity activity;  
-	ArrayList<Drawer_ItemObjct> arrayitms; 
+	ArrayList<DrawerItemObjct> arrayitms; 
 
-   public Drawer_NavigationAdapter(Activity activity,ArrayList<Drawer_ItemObjct>  listarry) {  
+   public DrawerNavigationAdapter(Activity activity,ArrayList<DrawerItemObjct>  listarry) {  
        super();  
        this.activity = activity;  
        this.arrayitms=listarry;
@@ -48,7 +48,7 @@ public class Drawer_NavigationAdapter extends BaseAdapter {
        {  
            view = new Fila();
            //Creo objeto item y lo obtengo del array
-           Drawer_ItemObjct itm=arrayitms.get(position);
+           DrawerItemObjct itm=arrayitms.get(position);
            convertView = inflator.inflate(R.layout.drawer_item, null);
            //Titulo
            view.titulo_itm = (TextView) convertView.findViewById(R.id.title_item);

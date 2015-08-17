@@ -22,20 +22,20 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import co.edu.idiomasmedellin.accesoadatos.LessonsDbHelper;
+import co.edu.idiomasmedellin.fragments.LessonListFragment;
 import co.edu.idiomasmedellin.fragments.HomeFragment;
-import co.edu.idiomasmedellin.fragments.LevelFragment;
 import co.edu.idiomasmedellin.fragments.ProfileFragment;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity implements LessonListFragment.Callbacks{
 	    private String[] titulos;
 	    private DrawerLayout NavDrawerLayout;
 	    private ListView NavList;
-        private ArrayList<Drawer_ItemObjct> NavItms;
+        private ArrayList<DrawerItemObjct> NavItms;
         private TypedArray NavIcons;
 	    private ActionBarDrawerToggle mDrawerToggle;
 	    private CharSequence mDrawerTitle;
 	    private CharSequence mTitle;
-	    Drawer_NavigationAdapter NavAdapter;  
+	    DrawerNavigationAdapter NavAdapter;  
 	    Button button;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,26 +67,26 @@ public class MainActivity extends Activity {
 	        titulos = getResources().getStringArray(R.array.nav_options);
 	        
 	        //Listado de titulos de barra de navegacion
-	        NavItms = new ArrayList<Drawer_ItemObjct>();
+	        NavItms = new ArrayList<DrawerItemObjct>();
 	        
 	        //Agrega objetos Item_objct al array	   
 	        //Inicio
-	        NavItms.add(new Drawer_ItemObjct(titulos[0], NavIcons.getResourceId(0, -1)));
+	        NavItms.add(new DrawerItemObjct(titulos[0], NavIcons.getResourceId(0, -1)));
 	        //Perfil
-	        NavItms.add(new Drawer_ItemObjct(titulos[1], NavIcons.getResourceId(1, -1)));
+	        NavItms.add(new DrawerItemObjct(titulos[1], NavIcons.getResourceId(1, -1)));
 	        //Apuntes
-	        NavItms.add(new Drawer_ItemObjct(titulos[2], NavIcons.getResourceId(2, -1)));
+	        NavItms.add(new DrawerItemObjct(titulos[2], NavIcons.getResourceId(2, -1)));
 	        //Reserva
-	        NavItms.add(new Drawer_ItemObjct(titulos[3], NavIcons.getResourceId(3, -1)));
+	        NavItms.add(new DrawerItemObjct(titulos[3], NavIcons.getResourceId(3, -1)));
 	        //Misión - Visión
-	        NavItms.add(new Drawer_ItemObjct(titulos[4], NavIcons.getResourceId(4, -1)));
+	        NavItms.add(new DrawerItemObjct(titulos[4], NavIcons.getResourceId(4, -1)));
 	        //Contacto
-	        NavItms.add(new Drawer_ItemObjct(titulos[5], NavIcons.getResourceId(5, -1)));
+	        NavItms.add(new DrawerItemObjct(titulos[5], NavIcons.getResourceId(5, -1)));
 	        //Configuración
-	        NavItms.add(new Drawer_ItemObjct(titulos[6], NavIcons.getResourceId(6, -1)));
+	        NavItms.add(new DrawerItemObjct(titulos[6], NavIcons.getResourceId(6, -1)));
 	      
 	        /**Declara y setea adaptador @Drawer_NavigationAdapteral cual le pasa el array con los títulos	  */     
-	        NavAdapter= new Drawer_NavigationAdapter(this,NavItms);
+	        NavAdapter= new DrawerNavigationAdapter(this,NavItms);
 	        NavList.setAdapter(NavAdapter);	
 	       
 	        //Siempre mostrar el mismo titulo
@@ -128,6 +128,8 @@ public class MainActivity extends Activity {
 	        
 	        //Cuando la aplicacion cargue por defecto mostrar la opcion Home
 	        MostrarFragment(1);
+	        
+	        
 	}
 	
 	/**Pasando la posición de la opción en el menu nos mostrara el Fragment correspondiente*/
@@ -142,7 +144,8 @@ public class MainActivity extends Activity {
             fragment = new ProfileFragment();
             break;
         case 4:
-        	fragment = new LevelFragment();        	
+        	fragment = new LessonListFragment();
+        	
             break;
         default:
         	//si no esta la opción mostrara un toast y nos mandara a Home
@@ -191,4 +194,10 @@ public class MainActivity extends Activity {
         // Handle your other action bar items...
         return super.onOptionsItemSelected(item);
     }
+
+	@Override
+	public void onEntradaSelecionada(String id) {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -1,4 +1,4 @@
-package co.edu.idiomasmedellin.dto;
+package co.edu.idiomasmedellin.fragments;
 
 import java.util.ArrayList;
 
@@ -8,13 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-public abstract class LessonsList_Adapter extends BaseAdapter {
+/** Adaptador de ListView universal, para www.jarroba.com
+ * @author Ramon Invarato Menéndez
+ */
+public abstract class Lista_adaptador extends BaseAdapter {
 
     private ArrayList<?> entradas; 
     private int R_layout_IdView; 
     private Context contexto;
 
-    public LessonsList_Adapter(Context contexto, int R_layout_IdView, ArrayList<?> entradas) {
+    public Lista_adaptador(Context contexto, int R_layout_IdView, ArrayList<?> entradas) {
         super();
         this.contexto = contexto;
         this.entradas = entradas; 

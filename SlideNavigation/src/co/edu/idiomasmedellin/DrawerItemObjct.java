@@ -1,9 +1,9 @@
 package co.edu.idiomasmedellin;
 
-public class Drawer_ItemObjct {
+public class DrawerItemObjct {
 	private String titulo;
 	private int icono;
-	public Drawer_ItemObjct(String title, int icon) {
+	public DrawerItemObjct(String title, int icon) {
 		  this.titulo = title;
 	      this.icono = icon;		    
 	}	

@@ -9,6 +9,8 @@
     <string name="nivel_a2">Nivel A2</string>
     <string name="nivel_b1">Nivel B1</string>
     
+    <string name="pick_date">Ver horario de clase</string>
+    
     <string name="reserva">Reserva de Clases</string>
     
     <!-- Lista de titulos de navegacion-->    

@@ -31,9 +31,7 @@
 		<activity
             android:name="co.edu.idiomasmedellin.fragments.CalendarFragment"
             android:label="@string/reserva" >            
-        </activity>
-
-        
+        </activity>     
     </application>
 
 </manifest>
