@@ -5,5 +5,12 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="lib" path="C:/Users/landrea.velez/Downloads/Nueva carpeta/bolts-android-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/landrea.velez/Downloads/Nueva carpeta/bolts-android-1.2.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/landrea.velez/Downloads/Nueva carpeta/Parse-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/landrea.velez/Downloads/Nueva carpeta/ParseCrashReporting-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/landrea.velez/Downloads/Nueva carpeta/ParseFacebookUtilsV4-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/landrea.velez/Downloads/Nueva carpeta/ParseTwitterUtils-1.10.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/landrea.velez/Downloads/Nueva carpeta/PPNS-1.10.1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

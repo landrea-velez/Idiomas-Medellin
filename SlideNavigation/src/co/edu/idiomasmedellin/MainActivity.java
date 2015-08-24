@@ -3,6 +3,8 @@ package co.edu.idiomasmedellin;
 import java.util.ArrayList;
 
 import com.cipolat.slidenavigation.R;
+import com.parse.Parse;
+import com.parse.ParseObject;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -40,7 +42,14 @@ public class MainActivity extends FragmentActivity implements LessonListFragment
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
-			setContentView(R.layout.drawer_main);		
+			setContentView(R.layout.drawer_main);	
+			// Enable Local Datastore.
+			Parse.enableLocalDatastore(this);
+			 
+			Parse.initialize(this, "6Qt36W10wsjebTKmMAZsOIVIkzYMu3RTjaDpzzJL", "QHfr85NZkqM91OVVtLltS6E9akSTKYGQpICrr7Iw");
+			
+
+					
 			
 			/** Se declara el controlador de la BBDD @LessonsDbHelper 
 			 *  Se accede en modo escritura */

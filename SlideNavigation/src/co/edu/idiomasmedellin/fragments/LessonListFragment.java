@@ -70,7 +70,7 @@ public class LessonListFragment extends ListFragment {
 	@Override
 	public void onListItemClick(ListView listView, View view, int posicion, long id) {
 		super.onListItemClick(listView, view, posicion, id);			
-		Fragment fragment = new CalendarFragment();		
+		Fragment fragment = new ClassesFragment();		
 		FragmentTransaction transaction = getFragmentManager().beginTransaction();
 		transaction.replace(R.id.content_frame, fragment);
 		transaction.addToBackStack(null);

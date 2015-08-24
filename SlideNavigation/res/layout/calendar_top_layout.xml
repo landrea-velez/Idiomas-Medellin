@@ -3,25 +3,144 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" >
+
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal" >
-        <Button
-        android:id="@+id/piker"
-        android:layout_width="wrap_content"
-        android:layout_height="34dp"
-        android:onClick="showDatePickerDialog"
-        android:text="@string/pick_date"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-        <TextView
-        android:id="@+id/textView_fecha"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.08"
-        android:text="Fecha"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:orientation="horizontal" >
+        
+        <Button
+	        android:id="@+id/piker"
+	        android:layout_width="wrap_content"
+	        android:layout_height="38dp"
+	        android:onClick="showDatePickerDialog"
+	        android:text="@string/pick_date"
+	        android:textAppearance="?android:attr/textAppearanceSmall" />
+        <TextView
+	        android:id="@+id/textView_fecha"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="0.08"
+	        android:text=""
+	        android:textAppearance="?android:attr/textAppearanceSmall" />
    </LinearLayout>
+   
+   <LinearLayout 
+       android:layout_width="match_parent" 
+       android:layout_height="60dp" 
+       android:orientation="horizontal" 
+       android:padding="0dp">
+       <Button 
+           android:id="@+id/btnclase1"
+           android:layout_height="wrap_content" 
+           android:layout_width="match_parent" 
+           android:layout_weight="1" 
+           android:layout_margin="5dp" 
+           android:text="@string/clase1" 
+           android:textAppearance="?android:attr/textAppearanceSmall"/>
+       
+       <Button 
+           android:id="@+id/btnclase2"
+           android:layout_height="wrap_content" 
+           android:layout_width="match_parent" 
+           android:layout_weight="1" 
+           android:layout_margin="5dp" 
+           android:text="@string/clase6"  
+           android:textAppearance="?android:attr/textAppearanceSmall"/> 
+	</LinearLayout> 
+    <LinearLayout 
+       android:layout_width="match_parent" 
+       android:layout_height="60dp" 
+       android:orientation="horizontal" 
+       android:padding="0dp">
+       <Button 
+           android:id="@+id/btnclase3"
+           android:layout_height="wrap_content" 
+           android:layout_width="match_parent" 
+           android:layout_weight="1" 
+           android:layout_margin="5dp" 
+           android:text="@string/clase2"  
+           android:textAppearance="?android:attr/textAppearanceSmall"/>
+       
+       <Button 
+           android:id="@+id/btnclase4"
+           android:layout_height="wrap_content" 
+           android:layout_width="match_parent" 
+           android:layout_weight="1" 
+           android:layout_margin="5dp" 
+           android:text="@string/clase7"  
+           android:textAppearance="?android:attr/textAppearanceSmall"/> 
+	</LinearLayout> 
+	<LinearLayout 
+       android:layout_width="match_parent" 
+       android:layout_height="60dp" 
+       android:orientation="horizontal" 
+       android:padding="0dp">
+       <Button 
+           android:id="@+id/btnclase5"
+           android:layout_height="wrap_content" 
+           android:layout_width="match_parent" 
+           android:layout_weight="1" 
+           android:layout_margin="5dp" 
+           android:text="@string/clase3"  
+           android:textAppearance="?android:attr/textAppearanceSmall"/>
+       
+       <Button 
+           android:id="@+id/btnclase6"
+           android:layout_height="wrap_content" 
+           android:layout_width="match_parent" 
+           android:layout_weight="1" 
+           android:layout_margin="5dp" 
+           android:text="@string/clase8" 
+           android:textAppearance="?android:attr/textAppearanceSmall"/> 
+	</LinearLayout> 
+	<LinearLayout 
+       android:layout_width="match_parent" 
+       android:layout_height="60dp" 
+       android:orientation="horizontal" 
+       android:padding="0dp">
+       <Button 
+           android:id="@+id/btnclase7"
+           android:layout_height="wrap_content" 
+           android:layout_width="match_parent" 
+           android:layout_weight="1" 
+           android:layout_margin="5dp" 
+           android:text="@string/clase4" 
+           android:textAppearance="?android:attr/textAppearanceSmall"/>
+       
+       <Button 
+           android:id="@+id/btnclase8"
+           android:layout_height="wrap_content" 
+           android:layout_width="match_parent" 
+           android:layout_weight="1" 
+           android:layout_margin="5dp" 
+           android:text="@string/clase9"  
+           android:textAppearance="?android:attr/textAppearanceSmall"/> 
+	</LinearLayout> 
+	<LinearLayout 
+       android:layout_width="match_parent" 
+       android:layout_height="60dp" 
+       android:orientation="horizontal" 
+       android:padding="0dp">
+       <Button 
+           android:id="@+id/btnclase9"
+           android:layout_height="wrap_content" 
+           android:layout_width="match_parent" 
+           android:layout_weight="1" 
+           android:layout_margin="5dp" 
+           android:text="@string/clase5" 
+           android:textAppearance="?android:attr/textAppearanceSmall"/>
+       
+       <Button 
+           android:id="@+id/btnclase10"
+           android:layout_height="wrap_content" 
+           android:layout_width="match_parent" 
+           android:layout_weight="1" 
+           android:layout_margin="5dp" 
+           android:text="@string/clase10"  
+           android:textAppearance="?android:attr/textAppearanceSmall"/> 
+	</LinearLayout> 
+
  
       
 </LinearLayout>

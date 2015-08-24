@@ -44,21 +44,31 @@ public final class R {
         public static final int icono=0x7f02000c;
     }
     public static final class id {
-        public static final int backgrd=0x7f090002;
-        public static final int content_frame=0x7f090006;
-        public static final int drawer_layout=0x7f090005;
-        public static final int icon=0x7f090003;
-        public static final int imageView1=0x7f090008;
-        public static final int imageView_imagen_miniatura=0x7f09000b;
-        public static final int item_refresh=0x7f09000d;
-        public static final int item_save=0x7f09000e;
-        public static final int lista=0x7f090007;
-        public static final int n=0x7f09000a;
+        public static final int backgrd=0x7f09000c;
+        public static final int btnclase1=0x7f090002;
+        public static final int btnclase10=0x7f09000b;
+        public static final int btnclase2=0x7f090003;
+        public static final int btnclase3=0x7f090004;
+        public static final int btnclase4=0x7f090005;
+        public static final int btnclase5=0x7f090006;
+        public static final int btnclase6=0x7f090007;
+        public static final int btnclase7=0x7f090008;
+        public static final int btnclase8=0x7f090009;
+        public static final int btnclase9=0x7f09000a;
+        public static final int content_frame=0x7f090010;
+        public static final int drawer_layout=0x7f09000f;
+        public static final int icon=0x7f09000d;
+        public static final int imageView1=0x7f090012;
+        public static final int imageView_imagen_miniatura=0x7f090015;
+        public static final int item_refresh=0x7f090017;
+        public static final int item_save=0x7f090018;
+        public static final int lista=0x7f090011;
+        public static final int n=0x7f090014;
         public static final int piker=0x7f090000;
-        public static final int textView1=0x7f090009;
+        public static final int textView1=0x7f090013;
         public static final int textView_fecha=0x7f090001;
-        public static final int textView_titulo=0x7f09000c;
-        public static final int title_item=0x7f090004;
+        public static final int textView_titulo=0x7f090016;
+        public static final int title_item=0x7f09000e;
     }
     public static final class layout {
         public static final int calendar_top_layout=0x7f030000;
@@ -75,15 +85,27 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
+        /**  Lista de horarios  
+         */
+        public static final int clase1=0x7f050009;
+        public static final int clase10=0x7f050012;
+        public static final int clase2=0x7f05000a;
+        public static final int clase3=0x7f05000b;
+        public static final int clase4=0x7f05000c;
+        public static final int clase5=0x7f05000d;
+        public static final int clase6=0x7f05000e;
+        public static final int clase7=0x7f05000f;
+        public static final int clase8=0x7f050010;
+        public static final int clase9=0x7f050011;
         public static final int hello_world=0x7f050002;
         public static final int lista_vacia=0x7f050003;
         /**  Lista de niveles  
          */
-        public static final int nivel_a1=0x7f050004;
-        public static final int nivel_a2=0x7f050005;
-        public static final int nivel_b1=0x7f050006;
-        public static final int pick_date=0x7f050007;
-        public static final int reserva=0x7f050008;
+        public static final int nivel_a1=0x7f050006;
+        public static final int nivel_a2=0x7f050007;
+        public static final int nivel_b1=0x7f050008;
+        public static final int pick_date=0x7f050004;
+        public static final int reserva=0x7f050005;
     }
     public static final class style {
         /** 
